@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="/src/assets/vulcan-logo-1.png" alt="Vulcan White Logo" title="Vulcan Logo"/>
+</div>
+
 ## Technical Documentation - Vulcan
 
 ### Overview
@@ -35,11 +39,11 @@ Its 05 characteristics are:
 
 ### 2. Logo
 
-<img src="/src/assets/visual-identity-black-card-1.png" width="400" />
+<img src="/src/assets/visual-identity-black-card-1.png" width="400" alt="Visual Idetity Black Card 01" title="Vulcan Logo"/>
 </br>
-<img src="/src/assets/visual-identity-black-card-2.png" width="400" />
+<img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Vulcan Logo"/>
 </br>
-<img src="/src/assets/visual-identity-white-card.png" width="400" />
+<img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Vulcan Logo"/>
 
 
 ## Tables
@@ -47,7 +51,6 @@ Its 05 characteristics are:
 | Tool | Version |
 |-------|------------|
 | ESLint | `^10.0.1` |
-| Manifest-V3 | 
 | NodeJS | `24.22.0` |
 | React | `^19.3.1` | 
 | TailwindCSS | `^4.3.4` |
