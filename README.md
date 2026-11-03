@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+## Technical Documentation - Vulcan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Overview
 
-Currently, two official plugins are available:
+Widget React para IA Local e Produtividade
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Vulcan - Intelligence By Your Side** é uma extensão **Chrome** `React` + `Manifest V3` - Copiloto de Leitura e Contexto com IA. Uma extensão em `React` que permite selecionar qualquer texto ou trecho de código em uma página web e abrir um painel lateral com recursos de IA: Resumo inteligente, explicação de trechos complexos, extração de conceitos-chave ou tradução explicativa.
 
-## React Compiler
+Usando **APIs de IA** integradas do próprio navegador pra rodar **100%** offline e sem custos de API, ou permitir que o usuário coloque a própria API Key. Esse projeto exige excelente domínio em React - manipulação de DOM do navegador, injeção de contente scripts, gerenciamento de estado no side panel e comunicação de mensagens assíncronas do **Chrome Extension**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sua personalidade representa **confiança e inteligência**, com o nome *VULCAN* pensado para lembrar o vermelho como parte da sua personalidade além da identidade. Seu nome vem de *VOLCANO*, uma figura da mitologia romana associada à criação, à forja e ao domínio dos metais. Mas, no universo do nosso projeto, essa inspiração ganha outro significado. 
 
-## Expanding the ESLint configuration
+Ele não trabalha com fogo ou metal, mas sim com conhecimento e informação. Assim como uma forja transforma matéria-prima em algo extraordinário, Vulcan transforma informações complexas em respostas claras e resumidas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Ele é uma inteligência que aprende a compreender o contexto e acompanha o usuário em suas atividades. Vulcan não foi desenvolvido para substituir o usuário. Foi desenvolvido para ampliar aquilo que ele é capaz de fazer.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Characteres
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Suas 05 características são:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Autônomo**: Analisa situações e propõe caminhos;
+- **Confiável**: Prioriza respostas úteis e transparentes;
+- **Inteligente**: Compreende contextos;
+- **Parceiro**: Trabalha ao lado do usuário em qualquer software, sem tentar assumir seu lugar;
+- **Determinado**: Uma identidade forte e uma comunicação objetiva.
 
-```
+## Visual Identity
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Colors
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Red: `#35141D` `#641B2B` `#8C2639` `#C65A6C`;
+- White: `#F5F5F5`;
+- Black: `#0E0E0E`;
+- Gray: `#999999`;
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Logo
 
-```
+> Developing logo...
+
+## Tables
+
+| Tool | Version |
+|-------|------------|
+| ESLint | `^10.0.1` |
+| Manifest-V3 | 
+| NodeJS | `24.22.0` |
+| React | `^19.3.1` | 
+| TailwindCSS | `^4.3.4` |
+| TypeScript | `5.5.3` | 
+| Vite | `^6.1.2` |
