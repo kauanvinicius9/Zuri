@@ -44,15 +44,3 @@ Its 05 characteristics are:
 <img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Vulcan Logo"/>
 </br>
 <img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Vulcan Logo"/>
-
-
-## Tables
-
-| Tool | Version |
-|-------|------------|
-| ESLint | `^10.0.1` |
-| NodeJS | `24.22.0` |
-| React | `^19.3.1` | 
-| TailwindCSS | `^4.3.4` |
-| TypeScript | `5.5.3` | 
-| Vite | `^6.1.2` |

@@ -1,18 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "Vulcan | Intelligence By Your Side",
-    "version": "1.0.0",
-    "description": "Intelligence by your side - React widget to local AI productivity",
-    "action": {
-        "default_popup": "index.html",
-        "default_icon": {
-            "16": "icons/icon16.png",
-            "48": "icons/icon48.png",
-            "128": "icons/icon128.png"
-        }
-    },
-    "permission": [
-        "storage",
-        "activeTab"
-    ]
+  "manifest_version": 3,
+  "name": "ContextPilot AI",
+  "version": "1.0.0",
+  "description": "Copiloto de leitura e análise de código local e offline alimentado por IA.",
+  "permissions": [ "sidePanel", "activeTab", "scripting", "storage", "contextMenus" ],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "dist/background.js", "type": "module" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"]
+    }
+  ],
+  "side_panel": {"default_path": "sidepanel.html"},
+  "action": {"default_title": "Abrir ContextPilot"},
+  "icons": {"128": "public/icon.png"}
 }
