@@ -35,7 +35,12 @@ Its 05 characteristics are:
 
 ### 2. Logo
 
-> Developing logo...
+<img src="/src/assets/visual-identity-black-card-1.jpg"/>
+</br>
+<img src="/src/assets/visual-identity-black-card-2.jpg"/>
+</br>
+<img src="/src/assets/visual-identity-white-card.jpg"/>
+
 
 ## Tables
 
