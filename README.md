@@ -35,11 +35,11 @@ Its 05 characteristics are:
 
 ### 2. Logo
 
-<img src="/src/assets/visual-identity-black-card-1.jpg"/>
+<img src="/src/assets/visual-identity-black-card-1.png" width="400" />
 </br>
-<img src="/src/assets/visual-identity-black-card-2.jpg"/>
+<img src="/src/assets/visual-identity-black-card-2.png" width="400" />
 </br>
-<img src="/src/assets/visual-identity-white-card.jpg"/>
+<img src="/src/assets/visual-identity-white-card.png" width="400" />
 
 
 ## Tables
