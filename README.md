@@ -2,27 +2,27 @@
 
 ### Overview
 
-Widget React para IA Local e Produtividade
+React Widget for Local AI and Productivity
 
-**Vulcan - Intelligence By Your Side** é uma extensão **Chrome** `React` + `Manifest V3` - Copiloto de Leitura e Contexto com IA. Uma extensão em `React` que permite selecionar qualquer texto ou trecho de código em uma página web e abrir um painel lateral com recursos de IA: Resumo inteligente, explicação de trechos complexos, extração de conceitos-chave ou tradução explicativa.
+**Vulcan - Intelligence By Your Side** is a **Chrome** extension built with `React` + `Manifest V3`. It is an AI Reading and Context Copilot—a `React` extension that allows you to select any text or code snippet on a web page and open a side panel with AI features: smart summary, explanation of complex snippets, extraction of key concepts, or explanatory translation.
 
-Usando **APIs de IA** integradas do próprio navegador pra rodar **100%** offline e sem custos de API, ou permitir que o usuário coloque a própria API Key. Esse projeto exige excelente domínio em React - manipulação de DOM do navegador, injeção de contente scripts, gerenciamento de estado no side panel e comunicação de mensagens assíncronas do **Chrome Extension**
+Using built-in **AI APIs** from the browser itself to run **100%** offline and without API costs, or allowing the user to provide their own API Key. This project requires excellent mastery of React—browser DOM manipulation, content script injection, state management in the side panel, and asynchronous message communication in the **Chrome Extension**.
 
-Sua personalidade representa **confiança e inteligência**, com o nome *VULCAN* pensado para lembrar o vermelho como parte da sua personalidade além da identidade. Seu nome vem de *VOLCANO*, uma figura da mitologia romana associada à criação, à forja e ao domínio dos metais. Mas, no universo do nosso projeto, essa inspiração ganha outro significado. 
+Its personality represents **confidence and intelligence**, with the name *VULCAN* chosen to evoke red as part of its personality alongside its identity. Its name comes from *VOLCANO*, a figure from Roman mythology associated with creation, forging, and the mastery of metals. But in the universe of our project, this inspiration takes on another meaning. 
 
-Ele não trabalha com fogo ou metal, mas sim com conhecimento e informação. Assim como uma forja transforma matéria-prima em algo extraordinário, Vulcan transforma informações complexas em respostas claras e resumidas.
+It does not work with fire or metal, but rather with knowledge and information. Just as a forge transforms raw material into something extraordinary, Vulcan transforms complex information into clear and concise answers.
 
-Ele é uma inteligência que aprende a compreender o contexto e acompanha o usuário em suas atividades. Vulcan não foi desenvolvido para substituir o usuário. Foi desenvolvido para ampliar aquilo que ele é capaz de fazer.
+It is an intelligence that learns to understand context and accompanies the user in their activities. Vulcan was not developed to replace the user. It was developed to amplify what they are capable of doing.
 
 ## Characteres
 
-Suas 05 características são:
+Its 05 characteristics are:
 
-- **Autônomo**: Analisa situações e propõe caminhos;
-- **Confiável**: Prioriza respostas úteis e transparentes;
-- **Inteligente**: Compreende contextos;
-- **Parceiro**: Trabalha ao lado do usuário em qualquer software, sem tentar assumir seu lugar;
-- **Determinado**: Uma identidade forte e uma comunicação objetiva.
+- **Autonomous**: Analyzes situations and proposes paths;
+- **Reliable**: Prioritizes useful and transparent answers;
+- **Intelligent**: Understands contexts;
+- **Partner**: Works alongside the user in any software, without trying to take their place;
+- **Determined**: A strong identity and objective communication.
 
 ## Visual Identity
 
