@@ -10,14 +10,40 @@ export async function processTextWithAI( text: string, action: ActionType, setti
 
     const prompt = prompts[action];
      if (settings.provider === "local") {
-        return processWithLocalAI(prompt)
+        const localAvailable = await checkLocalAIAvailability();
+        if (localAvailable) {
+            return await processWithLocalAI(prompt)
+        }
+
+        if (settings.apiKey) {
+            console.warn("Zuri: IA local indisponível. Alternando para a API em nuvem...")
+            return await processWithGeminiAPI(prompt, settings.apiKey);
+        }
+
+        throw new Error(
+            "A IA local nativa não está disponível neste navegador. Ative em chrome://flags e nenhuma chave de API em nuvem foi configurada"
+        );
      }
 
      if (settings.provider === "gemini" && settings.apiKey) {
-        return processWithGeminiAPI(prompt, settings.apiKey);
+        return await processWithGeminiAPI(prompt, settings.apiKey);
      }
 
      throw new Error("Provedor de IA não configurado ou chave de API ausente");
+}
+
+async function checkLocalAIAvailability(): Promise<boolean> {
+    const aiWindow = window as any;
+    if (aiWindow.ai && aiWindow.ai.languageModel) {
+        try {
+            const capabilities = await aiWindow.ai.languageModel.capabilities();
+            return capabilities.available !== "no";
+        } catch (err) {
+            console.warn("Zuri: Erro ao checar capabilities da IA local", err);
+            return false;
+        }
+    }
+    return false;
 }
 
 async function processWithLocalAI(prompt: string): Promise<string> {

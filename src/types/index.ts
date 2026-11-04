@@ -1,4 +1,4 @@
-export type AIProvider = "local" | "openai" | "gemini";
+export type AIProvider = "local" | "openai" | "gemini" | "auto";
 
 export type ActionType = "summarize" | "explain" | "extract_concepts" | "translate";
 
