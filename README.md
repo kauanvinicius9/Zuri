@@ -12,8 +12,6 @@ React Widget for Local AI and Productivity
 
 Using built-in **AI APIs** from the browser itself to run **100%** offline and without API costs, or allowing the user to provide their own API Key. This project requires excellent mastery of React—browser DOM manipulation, content script injection, state management in the side panel, and asynchronous message communication in the **Chrome Extension**.
 
-Its personality represents **confidence and intelligence**, with the name *ZURI* chosen to evoke red as part of its personality alongside its identity. Its name comes from *VOLCANO*, a figure from Roman mythology associated with creation, forging, and the mastery of metals. But in the universe of our project, this inspiration takes on another meaning. 
-
 It does not work with fire or metal, but rather with knowledge and information. Just as a forge transforms raw material into something extraordinary, Zuri transforms complex information into clear and concise answers.
 
 It is an intelligence that learns to understand context and accompanies the user in their activities. Zuri was not developed to replace the user. It was developed to amplify what they are capable of doing.
