@@ -11,9 +11,9 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        sidepanel: resolve(__dirname, "sidepanel.html"),
-        background: resolve(__dirname, "src/background/index.ts"),
-        content: resolve(__dirname, "src/content/index.ts"),
+        sidepanel: resolve(import.meta.dirname, "src/sidepanel/sidepanel.html"),
+        background: resolve(import.meta.dirname, "src/background/index.ts"),
+        content: resolve(import.meta.dirname, "src/content/index.ts"),
       },
       output: {
         entryFileNames: "[name].js",

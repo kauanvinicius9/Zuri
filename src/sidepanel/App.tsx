@@ -16,7 +16,7 @@ export const App: React.FC = () => {
 
     useEffect(() => {
         if (chrome.storage?.local) {
-            chrome.storage.local.get(["ai_settings"], (res) => {
+            chrome.storage.local.get(["zuri_user_settings"], (res) => {
                 if (res.ai_settings) setSettings(res.ai_settings);
             });
         }
@@ -30,6 +30,13 @@ export const App: React.FC = () => {
         chrome.runtime?.onMessage?.addListener(messageListener);
         return () => chrome.runtime?.onMessage?.removeListener(messageListener);
     }, []);
+
+    const handleSaveSettings = (newSettings: UserSettings) => {
+        setSettings(newSettings);
+        if (chrome.storage?.local) {
+            chrome.storage.local.set({ zuri_user_settings: newSettings });
+        }
+    }
 
     const handleExecuteAction = async (action: ActionType) => {
         if (!selectedText) return;
@@ -78,10 +85,6 @@ export const App: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2">
                     <button onClick={() => handleExecuteAction("summarize")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 rounded-lg text-xs font-medium transition">
                         <BookOpen className="w-4 h-4"/> Resumir 
-                    </button>
-
-                    <button onClick={() => handleExecuteAction("explain")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 rounded-lg text-xs font-medium border-border-slate-700 transition">
-                        <Code className="w-4 h-4 text-cyan-400"/> Explicar
                     </button>
 
                     <button onClick={() => handleExecuteAction("extract_concepts")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 rounded-lg text-xs font-medium border-border-slate-700 transition">

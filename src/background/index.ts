@@ -1,5 +1,6 @@
-chrome.sidepanel.setPanelBehavior({ openPlaneOnActionClick: true});
-chrome.runtime.on.Installed.addListener(() => {
+chrome.sidepanel.setPanelBehavior({ openPanelOnActionClick: true });
+
+chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "analyze-selection",
         title: "Analisar com Zuri",
@@ -9,7 +10,7 @@ chrome.runtime.on.Installed.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "analyze-selection" && tab?.id && info.selectionText) {
-        chrome.sidePanel.open({ tabId: tab.id});
+        chrome.sidePanel.open({ tabId: tab.id });
 
         setTimeout(() => {
             chrome.runtime.sendMessage({
