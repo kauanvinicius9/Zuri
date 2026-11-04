@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We, as contributors and maintainers of Vulcan, are committed to making participation in our project and community a respectful, welcoming, and harassment-free experience for everyone.
+We, as contributors and maintainers of Zuri, are committed to making participation in our project and community a respectful, welcoming, and harassment-free experience for everyone.
 
 We believe that collaboration, mutual respect, and open communication are essential to building a strong open-source community.
 
@@ -38,7 +38,7 @@ This Code of Conduct applies to all project spaces, including:
 - GitHub repositories and discussions.
 - Issues and pull requests.
 - Community communication channels.
-- Other spaces where someone represents the Vulcan project.
+- Other spaces where someone represents the Zuri project.
 
 ## Enforcement
 

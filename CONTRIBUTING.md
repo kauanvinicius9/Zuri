@@ -1,6 +1,6 @@
-# Contributing to Vulcan
+# Contributing to Zuri
 
-First of all, thank you for your interest in contributing to Vulcan!
+First of all, thank you for your interest in contributing to Zuri!
 
 Every contribution matters — whether it's fixing a bug, improving documentation, suggesting a feature, or helping other contributors.
 
@@ -17,11 +17,11 @@ Please take a moment to:
 
 ### 1. Fork the Repository
 
-Create your own fork of the Vulcan repository and clone it locally.
+Create your own fork of the Zuri repository and clone it locally.
 
 ```bash
-git clone https://github.com/kauanvinicius9/Vulcan.git
-cd vulcan
+git clone https://github.com/kauanvinicius9/Zuri.git
+cd zuri
 ```
 
 ### 2. Set Up the Development Environment
@@ -90,7 +90,7 @@ docs: improve installation guide
 
 ### 6. Open a Pull Request
 
-Push your branch and open a Pull Request against the main Vulcan repository.
+Push your branch and open a Pull Request against the main Zuri repository.
 
 Please include:
 
@@ -130,6 +130,6 @@ Before opening a feature request, explain:
 
 If you need help, open a discussion or issue in the repository.
 
-Thank you for helping build Vulcan!
+Thank you for helping build Zuri!
 
-**VULCAN — Intelligence by your side.**
+**ZURI — Intelligence by your side.**

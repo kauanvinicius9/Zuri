@@ -1,22 +1,22 @@
 <div align="center">
-  <img src="/src/assets/vulcan-logo-1.png" alt="Vulcan White Logo" title="Vulcan Logo"/>
+  <img src="/src/assets/zuri-logo-1.png" alt="Zuri White Logo" title="Zuri Logo"/>
 </div>
 
-## Technical Documentation - Vulcan
+## Technical Documentation - Zuri
 
 ### Overview
 
 React Widget for Local AI and Productivity
 
-**Vulcan - Intelligence By Your Side** is a **Chrome** extension built with `React` + `Manifest V3`. It is an AI Reading and Context Copilot—a `React` extension that allows you to select any text or code snippet on a web page and open a side panel with AI features: smart summary, explanation of complex snippets, extraction of key concepts, or explanatory translation.
+**Zuri - Intelligence By Your Side** is a **Chrome** extension built with `React` + `Manifest V3`. It is an AI Reading and Context Copilot—a `React` extension that allows you to select any text or code snippet on a web page and open a side panel with AI features: smart summary, explanation of complex snippets, extraction of key concepts, or explanatory translation.
 
 Using built-in **AI APIs** from the browser itself to run **100%** offline and without API costs, or allowing the user to provide their own API Key. This project requires excellent mastery of React—browser DOM manipulation, content script injection, state management in the side panel, and asynchronous message communication in the **Chrome Extension**.
 
-Its personality represents **confidence and intelligence**, with the name *VULCAN* chosen to evoke red as part of its personality alongside its identity. Its name comes from *VOLCANO*, a figure from Roman mythology associated with creation, forging, and the mastery of metals. But in the universe of our project, this inspiration takes on another meaning. 
+Its personality represents **confidence and intelligence**, with the name *ZURI* chosen to evoke red as part of its personality alongside its identity. Its name comes from *VOLCANO*, a figure from Roman mythology associated with creation, forging, and the mastery of metals. But in the universe of our project, this inspiration takes on another meaning. 
 
-It does not work with fire or metal, but rather with knowledge and information. Just as a forge transforms raw material into something extraordinary, Vulcan transforms complex information into clear and concise answers.
+It does not work with fire or metal, but rather with knowledge and information. Just as a forge transforms raw material into something extraordinary, Zuri transforms complex information into clear and concise answers.
 
-It is an intelligence that learns to understand context and accompanies the user in their activities. Vulcan was not developed to replace the user. It was developed to amplify what they are capable of doing.
+It is an intelligence that learns to understand context and accompanies the user in their activities. Zuri was not developed to replace the user. It was developed to amplify what they are capable of doing.
 
 ## Characteres
 
@@ -39,8 +39,8 @@ Its 05 characteristics are:
 
 ### 2. Logo
 
-<img src="/src/assets/visual-identity-black-card-1.png" width="400" alt="Visual Idetity Black Card 01" title="Vulcan Logo"/>
+<img src="/src/assets/visual-identity-black-card-1.png" width="400" alt="Visual Identity Black Card 01" title="Zuri Logo"/>
 </br>
-<img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Vulcan Logo"/>
+<img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Zuri Logo"/>
 </br>
-<img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Vulcan Logo"/>
+<img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Zuri Logo"/>

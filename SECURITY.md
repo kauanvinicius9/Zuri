@@ -1,6 +1,6 @@
 # Security Policy
 
-The security of Vulcan and its users is important to us.
+The security of Zuri and its users is important to us.
 
 We appreciate the efforts of security researchers and community members who help identify and responsibly disclose vulnerabilities.
 
@@ -54,8 +54,8 @@ We ask security researchers not to exploit vulnerabilities beyond what is necess
 
 ## Scope
 
-This policy applies to the Vulcan project and its officially maintained components.
+This policy applies to the Zuri project and its officially maintained components.
 
 Third-party services, dependencies, and integrations may have their own security reporting procedures.
 
-Thank you for helping keep Vulcan and its community safe.
+Thank you for helping keep Zuri and its community safe.

@@ -2,7 +2,7 @@ chrome.sidepanel.setPanelBehavior({ openPlaneOnActionClick: true});
 chrome.runtime.on.Installed.addListener(() => {
     chrome.contextMenus.create({
         id: "analyze-selection",
-        title: "Analisar com Vulcan",
+        title: "Analisar com Zuri",
         contexts: ["selection"],
     });
 });

@@ -1,4 +1,4 @@
-import { ActionType, UserSettings } from "../types";
+import type { ActionType, UserSettings } from "../types";
 
 export async function processTextWithAI( text: string, action: ActionType, settings: UserSettings ): Promise<string> {
     const prompts: Record<ActionType, string> = {
@@ -14,7 +14,7 @@ export async function processTextWithAI( text: string, action: ActionType, setti
      }
 
      if (settings.provider === "gemini" && settings.apiKey) {
-        return processWidthGeminiAPI(prompt, settings.apiKey);
+        return processWithGeminiAPI(prompt, settings.apiKey);
      }
 
      throw new Error("Provedor de IA não configurado ou chave de API ausente");
