@@ -1,6 +1,7 @@
 **<img src="./src/assets/zuri-logo-icon-red.png" width="50" align="left"> &nbsp; Technical Documentation - Zuri**
 
 </br>
+
 ---
 
 ### Overview
