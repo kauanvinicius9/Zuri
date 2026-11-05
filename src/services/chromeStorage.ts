@@ -16,8 +16,8 @@ export async function saveUserSettings(settings: UserSettings): Promise<void> {
 
 export async function getUserSettings(): Promise<UserSettings | null> {
     try {
-        const result = await chrome.storage.local.get(storageKeys.USER_SETTINGS);
-        return result[storageKeys.USER_SETTINGS] || null;
+        const result = await chrome.storage.local.get(storageKeys);
+        return (result[storageKeys.USER_SETTINGS] as UserSettings) || null;
     } catch (error) {
         console.error("Erro ao recuperar configurações do Chrome Storage:", error);
         return null;

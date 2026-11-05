@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Sparkles, BookOpen, Cpu, Code, Copy, Check } from "lucide-react";
-import type { ActionType, UserSettings } from "../types";
 import { processTextWithAI } from "../services/aiService";
+import type { ActionType, UserSettings } from "../types";
+import { getUserSettings } from "../services/chromeStorage";
+import zuriLogo from "../assets/zuri-logo-2.png";
+
+interface SelectionSection {
+    text: string;
+    sourceUrl: string;
+    timestamp: number;
+}
 
 export const App: React.FC = () => {
     const [selectedText, setSelectedText] = useState<string>("");
@@ -15,28 +22,43 @@ export const App: React.FC = () => {
     });
 
     useEffect(() => {
-        if (chrome.storage?.local) {
-            chrome.storage.local.get(["zuri_user_settings"], (res) => {
-                if (res.ai_settings) setSettings(res.ai_settings);
+        async function loadStoredSettings() {
+            try {
+                const savedSettings = await getUserSettings();
+                if (savedSettings) {
+                    setSettings(savedSettings);
+                }
+            } catch (err) {
+                console.error("Erro ao carregar configurações do Zuri:", err);
+            }
+        }
+
+        loadStoredSettings();
+
+        if (chrome.storage?.session) {
+            chrome.storage.session.get(["current_selection"], (res) => {
+                const selection = res.current_selection as SelectionSection | undefined;
+                if (selection?.text) {
+                    setSelectedText(selection.text);
+                }
             });
         }
 
-        const messageListener = (message: any) => {
-            if (message.type === "SELECTED_TEXT_PAYLOAD") {
-                setSelectedText(message.payload.text);
+        const storageListener = (changes: { [key: string]: chrome.storage.StorageChange }, areaName: string) => {
+            if (areaName === "session" && changes.current_selection) {
+                const newValue = changes.current_selection.newValue as SelectionSection | undefined;
+                if (newValue?.text) {
+                    setSelectedText(newValue.text);
+                    setResult(""); 
+                }
             }
         };
 
-        chrome.runtime?.onMessage?.addListener(messageListener);
-        return () => chrome.runtime?.onMessage?.removeListener(messageListener);
+        chrome.storage?.onChanged?.addListener(storageListener);
+        return () => {
+            chrome.storage?.onChanged?.removeListener(storageListener);
+        };
     }, []);
-
-    const handleSaveSettings = (newSettings: UserSettings) => {
-        setSettings(newSettings);
-        if (chrome.storage?.local) {
-            chrome.storage.local.set({ zuri_user_settings: newSettings });
-        }
-    }
 
     const handleExecuteAction = async (action: ActionType) => {
         if (!selectedText) return;
@@ -59,41 +81,40 @@ export const App: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col h-screen p-4 bg-slate-900 text-slate-100">
+        <div className="flex flex-col h-screen p-4 bg-gradient-to-t from-zinc-200 to white text-white select-none">
             <header className="flex items-center justify-between pb-4 border-b border-slate-800">
                 <div className="flex items-center gap-2">
-                    <Sparkles className="w-5 h-5 text-indigo-400"/>
-                    <h1 className="font-bold text-lg bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                        Zuri (Colocar imagem depois)
-                        {/* <img src="" alt="" /> */}
-                    </h1>
+                    <img src={zuriLogo} alt="Logo Zuri" className="w-25" />
                 </div>
-                <span className="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
+                <span className="text-xs px-2 py-1 rounded-full bg-[#8c2639] text-white">
                     {settings.provider.toUpperCase()}
                 </span>
             </header>
 
-            <main className="flex-1 overflow-y-auto my-4  space-y-4">
-                <div className="p-3 bg-slate-800/60 border border-slate-700/50 rounded-xl">
-                <label className="text-xs font-semibold text-slate-400 block mb-1">
-                    Contexto Selecionado:
-                </label>
-                <p className="text-xs text-slate-300 line-clamp-4 italic">
-                    {selectedText || "Nenhum texto selecionado. Selecione um texto em qualquer página e clique com o botão direito"}
-                </p>
+            <main className="flex-1 overflow-y-auto my-4 space-y-4">
+                <div className="p-3 bg-zinc-200 rounded-xl space-y-3">
+                    <div>
+                        <label className="text-xs font-semibold text-black block mb-1">
+                            Contexto Selecionado:
+                        </label>
+                        <p className="text-xs text-zinc-600 line-clamp-4 italic p-2.5">
+                            {selectedText || "Nenhum texto selecionado. Selecione um texto em qualquer página e clique no menu de contexto."}
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                    <button onClick={() => handleExecuteAction("summarize")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 rounded-lg text-xs font-medium transition">
-                        <BookOpen className="w-4 h-4"/> Resumir 
-                    </button>
+                    <div className="grid grid-cols-2 gap-2">
+                        <button onClick={() => handleExecuteAction("summarize")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35131d] hover:text-white border border-[#35131d] rounded-lg text-xs font-medium transition cursor-pointer">
+                            Resumir 
+                        </button>
 
-                    <button onClick={() => handleExecuteAction("extract_concepts")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 rounded-lg text-xs font-medium border-border-slate-700 transition">
-                        <Cpu className="w-4 h-4 text-emerald-400"/> Conceitos
-                    </button>
+                        <button onClick={() => handleExecuteAction("extract_concepts")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35141d] hover:text-white rounded-lg text-xs font-medium border border-[#35131d] transition cursor-pointer">
+                            Conceitos
+                        </button>
 
-                    <button onClick={() => handleExecuteAction("translate")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 rounded-lg text-xs font-medium border-border-slate-700 transition">
-                        <Sparkles className="w-4 h-4 text-amber-400"/> Traduzir
-                    </button>
+                        <button onClick={() => handleExecuteAction("translate")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-[#641b2b] hover:bg-[#35141d] rounded-lg text-xs font-medium transition col-span-2 cursor-pointer">
+                            Traduzir
+                        </button>
+                    </div>
                 </div>
 
                 {loading && (
@@ -104,17 +125,18 @@ export const App: React.FC = () => {
 
                 {result && (
                     <div className="relative p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-2">
-                        <button onClick={copyToClipboard} className="absolute top-2 right-2 p-1.5 bg-slate-800 hover:bg-slate-700 rounded-md text-slate-400 hover:text-slate-200 transition">
-                            {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
+                        <button onClick={copyToClipboard} className="absolute top-2 right-2 p-1.5 bg-slate-800 hover:bg-slate-700 rounded-md text-slate-400 hover:text-slate-200 transition cursor-pointer">
+                            {copied ? "Copiado" : "Copiar"}
                         </button>
 
-                        <div className="text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
+                        <div className="text-xs text-slate-300 leading-relaxed whitespace-pre-wrap pr-6">
                             {result}
                         </div>
                     </div>
                 )}
-                 </div>
             </main>
         </div>
-    )
-}
+    );
+};
+
+export default App;

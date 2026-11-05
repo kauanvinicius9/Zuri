@@ -1,3 +1,37 @@
-node_modules
-.vscode
-.vs
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Production Build
+/dist
+/build
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Vite / Build Caches
+.vite
+.parcel-cache

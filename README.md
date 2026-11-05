@@ -45,36 +45,113 @@ Its 05 characteristics are:
 ## How to Use Zuri Plugin
  
 1- Clone this repository
+
 ```powershell
 git clone https://github.com/kauanvinicius9/Zuri.git
 ```
 
 2- Enter in the project
+
 ```powershell
 cd zuri
 ```
 
 3- Install dependences
+
 ```powershell
 npm install
 ```
 
 4- Update files
+
 ```powershell
 npm run build
 ```
 
-5- Developer mode, "Load without compaction" choosing `dist` folder
+5- Chrome
 
-```powershell
-chrome://extensions
-```
+- Acess [Chrome Extensions](chrome://extensions) and activate **developer mode**;
+- Load Unpacked;
+- Select `dist` folder, test on any page - select some text, right-click and choose **Analyze with Zuri**. The side panel opens. Clicking on the extension icon also opens the panel.
+
 
 Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
 
 The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The current Chrome documentation uses the global LanguageModel, along with dedicated **Summarizer** and **Translator** `APIs`, and all of them can be used in Chrome extensions. They fit well in Summarize and Translate.
 
 ---
+
+## Dependences
+
+> package.json
+
+```json
+{
+  "name": "zuri",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "lucide-react": "^1.67.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^8.3.5"
+  }
+}
+```
+
+> tsconfig.app.json
+
+```json
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "esnext",
+    "types": ["vite/client", "chrome"],
+    "allowArbitraryExtensions": true,
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}
+```
 
 <div align="left">
     <img src="./src/assets/skills/eslint-icon.svg" alt="ESLint Icon" width="40" title="ESLint" />

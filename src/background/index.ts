@@ -1,4 +1,4 @@
-chrome.sidepanel.setPanelBehavior({ openPanelOnActionClick: true });
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
@@ -8,18 +8,15 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (info.menuItemId === "analyze-selection" && tab?.id && info.selectionText) {
+        await chrome.storage.session.set({
+            current_selection: {
+                text: info.selectionText,
+                sourceUrl: tab.url || "",
+                timestamp: Date.now()
+            }
+        });
         chrome.sidePanel.open({ tabId: tab.id });
-
-        setTimeout(() => {
-            chrome.runtime.sendMessage({
-                type: "SELECTED_TEXT_PAYLOAD",
-                payload: {
-                    text: info.selectionText,
-                    sourceUrl: tab.url,
-                },
-            });
-        }, 400);
     }
 });

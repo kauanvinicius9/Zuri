@@ -5,6 +5,7 @@ export type ActionType = "summarize" | "explain" | "extract_concepts" | "transla
 export interface UserSettings {
     provider: AIProvider;
     apiKey?: string;
+    geminiModel?: string;
     targetLanguage?: string;
 }
 

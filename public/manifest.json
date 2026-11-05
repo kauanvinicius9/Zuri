@@ -9,10 +9,11 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["dist/content.js"]
+      "service_worker": "background.js",
+      "js": ["content.js"]
     }
   ],
-  "side_panel": {"default_path": "sidepanel.html"},
+  "side_panel": {"default_path": "dist/sidepanel.html"},
   "action": {"default_title": "Abrir Zuri"},
-  "icons": {"128": "public/icon.svg"}
+  "icons": {"128": "public/icon.png"}
 }
