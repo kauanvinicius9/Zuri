@@ -1,6 +1,7 @@
-**<img src="./src/assets/zuri-logo-icon-red.png" width="50" align="left"> &nbsp; Technical Documentation - Zuri**
-
-</br>
+<h1>
+ <img src="./src/assets/zuri-logo-icon-white.png" width="50" align="left">
+ <span>Technical Documentation - Zuri</span>
+</h1>
 
 ### Overview
 
