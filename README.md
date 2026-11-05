@@ -1,6 +1,6 @@
-<div align="left">
-  <img src="/src/assets/zuri-logo-icon-red.png" alt="Zuri Red Logo" title="Zuri Logo"/>
-  <h1>Technical Documentation - Zuri</h1>
+<div style="display: flex; align-items: center; gap: 16px;">
+  <img src="./src/assets/zuri-logo-icon-red.png" alt="Zuri Logo" width="60" height="60" />
+  <h1 style="margin: 0;">Technical Documentation - Zuri</h1>
 </div>
 
 ### Overview
