@@ -2,8 +2,6 @@
 
 </br>
 
----
-
 ### Overview
 
 React Widget for Local AI and Productivity
