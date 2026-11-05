@@ -73,3 +73,14 @@ chrome://extensions
 Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
 
 The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The current Chrome documentation uses the global LanguageModel, along with dedicated **Summarizer** and **Translator** `APIs`, and all of them can be used in Chrome extensions. They fit well in Summarize and Translate.
+
+---
+
+<div align="left">
+    <img src="./src/assets/skills/eslint-icon.svg" alt="ESLint Icon" width="40" title="ESLint" />
+    <img src="./src/assets/skills/nodejs-icon.svg" alt="NodeJS Icon" width="40" title="NodeJS" />
+    <img src="./src/assets/skills/react-icon.svg" alt="React Icon" width="40" title="React" />
+    <img src="./src/assets/skills/tailwindcss-icon.svg" alt="TailwindCSS Icon" width="40" title="TailwindCSS" />
+    <img src="./src/assets/skills/typescript-icon.svg" alt="TypeScript Icon" width="40" title="TypeScript" />
+    <img src="./src/assets/skills/vite-icon.svg" alt="Vite Icon" width="40" title="Vite" />
+</div>
