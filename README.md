@@ -1,4 +1,4 @@
-**<img src="./src/assets/zuri-logo-icon-red.png" width="45" align="left"> &nbsp; Technical Documentation - Zuri**
+**<img src="./src/assets/zuri-logo-icon-red.png" width="50" align="left"> &nbsp; Technical Documentation - Zuri**
 
 ---
 
