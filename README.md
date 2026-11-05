@@ -1,8 +1,7 @@
 <div align="center">
-  <img src="/src/assets/zuri-logo-1.png" alt="Zuri White Logo" title="Zuri Logo"/>
+  <img src="/src/assets/zuri-icon-red.png" alt="Zuri Red Logo" title="Zuri Logo"/>
+  <h1>Technical Documentation - Zuri</h1>
 </div>
-
-## Technical Documentation - Zuri
 
 ### Overview
 
