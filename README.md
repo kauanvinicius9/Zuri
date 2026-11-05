@@ -1,5 +1,5 @@
-<div align="center">
-  <img src="/src/assets/zuri-icon-red.png" alt="Zuri Red Logo" title="Zuri Logo"/>
+<div align="left">
+  <img src="/src/assets/zuri-logo-icon-red.png" alt="Zuri Red Logo" title="Zuri Logo"/>
   <h1>Technical Documentation - Zuri</h1>
 </div>
 
