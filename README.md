@@ -1,5 +1,7 @@
 <img src="./src/assets/zuri-logo-icon-red.png" width="45" align="left"> &nbsp; Technical Documentation - Zuri
 
+---
+
 ### Overview
 
 React Widget for Local AI and Productivity
