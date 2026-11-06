@@ -15,6 +15,7 @@
 - [4- Como Usar](#como-usar-o-plugin-do-zuri "Clique para Ver o Tópico do Tutorial de Como Usar")
 - [5- Dependências](#dependências "Clique para Ver o Tópico das Dependências")
 - [6- Ferramentas](#ferramentas "Clique para Ver o Tópico das Ferramentas")
+- [7- Requisitos](#requisitos "Clique para Ver o Tópico dos Requisitos")
 
 ## Visualização Geral
 
@@ -95,7 +96,28 @@ npm run dev
 
 Em seguida, o botão ativar na página inicial se comunica com a extensão (via postMessage para o content script) e define uma flag no chrome.storage. Com ela ligada, o content script exibe um popup flutuante próximo ao texto selecionado, com Resumir, Conceitos e Traduzir.
 
----
+## Requisitos
+
+### Para Usar o Projeto
+
+- NodeJS `20.19+` ou `22.13+` com `npm`;
+- Git;
+- Google Chrome para desktop, versão 138 ou superior.
+
+### Para Usar a IA Local (Opcional)
+
+- Windows 10/11, macOS 13+, Linux ou ChromeOS em Chromebook Plus;
+- Ao menos 22 GB livres no disco onde fica o perfil do Chrome;
+- GPU com mais de 04 GB de VRAM, ou CPU com 16 GB de RAM e 04 núcleos ou mais;
+- Internet no primeiro uso, para o Chrome baixar o modelo;
+- Modelos locais aceitam **Francês**, **Inglês**, **Japonês**, **Espanhol** e **Alemão**. Conceitos em Português e Resumir podem exigir a chave do Gemini.
+
+### Sem IA Local
+
+-  Uma chave de API do Gemini, podendo adquirir na [Google AI Studio](https://aistudio.google.com) informada nas configurações da extensão.
+
+> [!WARNING]
+Chrome para Android e IOS não é suportado
 
 ## Dependências
 

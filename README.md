@@ -15,6 +15,7 @@
 - [4- How to Use](#how-to-use-zuri-plugin "Click to View Tutorial to Use Topic")
 - [5- Dependences](#dependences "Click to View Dependences Topic")
 - [6- Tools](#tools "Click to View Tools Topic")
+- [7- Requirements](#requirements "Click to View Requirements Topic")
 
 ## Overview
 
@@ -95,7 +96,28 @@ npm run dev
 
 Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
 
----
+## Requirements
+
+### To Run de Project
+
+- NodeJS `20.19+` or `22.13+` with `npm`;
+- Git;
+- Google Chrome to desktop, version 138 or later.
+
+### To Use AI Local
+
+- Windows 10/11, macOS 13+, Linux or ChromeOS in Chromebook Plus;
+- At least 22 GB of free space on the disk that holds your Chrome profile;
+- GPU with more than 04 GB of VRAM, or CPU with 16 GB of RAM and 04 or more cores;
+- Internet access the first time, so Chrome can download the model;
+- Local models accept **French**, **English**, **Japanese**, **Spanish** and **Germany**. Concepts and summarize in Portuguese em Português may require a Gemini API Key.
+
+### Without Local AI
+
+- A Gemini API key [Google AI Studio](https://aistudio.google.com) provided in the extension settings.
+
+> [!WARNING]
+Chrome of Android and IOS isn't supported.
 
 ## Dependences
 
