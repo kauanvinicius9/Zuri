@@ -141,7 +141,6 @@ The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The c
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
 
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
@@ -149,7 +148,6 @@ The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The c
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
