@@ -68,7 +68,13 @@ npm install
 npm run build
 ```
 
-5- Chrome
+5- Run project
+
+```powershell
+npm run dev
+```
+
+6- Chrome
 
 - Acess [Chrome Extensions](chrome://extensions) and activate **developer mode**;
 - Load Unpacked;
