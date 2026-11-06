@@ -17,11 +17,36 @@ Please take a moment to:
 
 ### 1. Fork the Repository
 
-Create your own fork of the Zuri repository and clone it locally.
+Click **Fork** at the top of the [Zuri repository](https://github.com/kauanvinicius9/Zuri "Click to Access Official Zuri Repository") to create your own copy.
+
+Then clone **your fork** (replace `YOUR-NAME` with your Github username)
 
 ```bash
-git clone https://github.com/kauanvinicius9/Zuri.git
-cd zuri
+git clone https://github.com/YOUR-NAME/Zuri.git
+```
+
+```bash
+cd Zuri
+```
+
+Add the original repository as `upstream` so you can keep your fork up to date:
+
+```bash
+git remote add upstream https://github.com/kauanvinicius9/Zuri.git
+```
+
+Before starting new work, sync your fork:
+
+```bash
+git fetch upstream
+```
+
+```bash
+git checkout main
+```
+
+```bash
+git merge upstream/main
 ```
 
 ### 2. Set Up the Development Environment
@@ -64,7 +89,9 @@ Before submitting your changes, run the available project checks:
 
 ```bash
 npm run lint
-npm run test
+```
+
+```bash
 npm run build
 ```
 
@@ -90,7 +117,13 @@ docs: improve installation guide
 
 ### 6. Open a Pull Request
 
-Push your branch and open a Pull Request against the main Zuri repository.
+Push your branch to your fork:
+
+```bash
+git push origin type/shor-description
+```
+
+Then open a Pull Request from your fork's branch to the `main` branch of `kauanvinicius9/Zuri`
 
 Please include:
 
@@ -132,4 +165,4 @@ If you need help, open a discussion or issue in the repository.
 
 Thank you for helping build Zuri!
 
-**ZURI — Intelligence by your side.**
+**Zuri — Intelligence by your side.**

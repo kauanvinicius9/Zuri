@@ -3,6 +3,8 @@
  <span>Technical Documentation - Zuri</span>
 </h1>
 
+[Português](README.pt-BR.md "Click to Access the Portuguese Documentation")
+
 ## Summary
 
 - [1- Overview](#overview "Click to View Overview Topic")
@@ -33,7 +35,7 @@ Its 05 characteristics are:
 - **Autonomous**: Analyzes situations and proposes paths;
 - **Reliable**: Prioritizes useful and transparent answers;
 - **Intelligent**: Understands contexts;
-- **Partner**: Works alongside the user in any software, without trying to take their place;
+- **Partner**: Works on any website, without trying to take their place;
 - **Determined**: A strong identity and objective communication.
 
 ## Visual Identity
@@ -64,7 +66,7 @@ git clone https://github.com/kauanvinicius9/Zuri.git
 2- Enter in the project
 
 ```powershell
-cd zuri
+cd Zuri
 ```
 
 3- Install dependences
@@ -91,53 +93,11 @@ npm run dev
 - Load Unpacked;
 - Select `dist` folder, test on any page - select some text, right-click and choose **Analyze with Zuri**. The side panel opens. Clicking on the extension icon also opens the panel.
 
-
 Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
-
-The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The current Chrome documentation uses the global LanguageModel, along with dedicated **Summarizer** and **Translator** `APIs`, and all of them can be used in Chrome extensions. They fit well in Summarize and Translate.
 
 ---
 
 ## Dependences
-
-> package.json
-
-```json
-{
-  "name": "zuri",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.3.4",
-    "lucide-react": "^1.67.0",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "tailwindcss": "^4.3.4"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/chrome": "^0.3.7",
-    "@types/node": "^24.19.2",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "eslint": "^10.13.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.7",
-    "globals": "^17.13.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.72.0",
-    "vite": "^8.3.5"
-  }
-}
-```
 
 > tsconfig.app.json
 

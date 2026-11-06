@@ -10,8 +10,8 @@ Security updates are provided for the following versions:
 
 | Version | Supported |
 | ------- | --------- |
-| Latest release | Yes |
-| Older releases | No |
+| Latest release | ✅ |
+| Older releases | ❌ |
 
 This policy may change as the project evolves.
 
@@ -22,7 +22,7 @@ This policy may change as the project evolves.
 If you discover a potential security vulnerability, report it privately through one of the following channels:
 
 - GitHub Private Vulnerability Reporting: [Enable and use this feature in the repository's Security tab](../../security/advisories/new).
-- Email: [INSERT SECURITY CONTACT EMAIL]
+- Email: [saleskauan308@gmail.cm](saleskauan308@gmail.com "Click to Access My Email and Report a Vulnerability").
 
 Please include as much information as possible:
 
