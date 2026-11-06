@@ -3,7 +3,18 @@
  <span>Technical Documentation - Zuri</span>
 </h1>
 
-### Overview
+## Summary
+
+- [1- Overview](#overview "Click to View Overview Topic")
+- [2- Characters](#characteres "Click to View Characteres Topic")
+- [3- Visual Identity](#visual-identity "Click to View Visual Identity Topic")
+  - [3.1- Colors](#1-colors "Click to View Colors Subtopic")
+  - [3.2- Logo](#2-logo "Click to View Logo Subtopic")
+- [4- How to Use](#how-to-use-zuri-plugin "Click to View Tutorial to Use Topic")
+- [5- Dependences](#dependences "Click to View Dependences Topic")
+- [6- Tools](#tools "Click to View Tools Topic")
+
+## Overview
 
 React Widget for Local AI and Productivity
 
