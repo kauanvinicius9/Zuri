@@ -157,6 +157,8 @@ The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The c
 }
 ```
 
+## Tools
+
 <div align="left">
     <img src="./src/assets/skills/eslint-icon.svg" alt="ESLint Icon" width="40" title="ESLint" />
     <img src="./src/assets/skills/nodejs-icon.svg" alt="NodeJS Icon" width="40" title="NodeJS" />
