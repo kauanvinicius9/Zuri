@@ -171,10 +171,10 @@ The `aiService.ts` uses `window.ai.languageModel`, which is the old `API`. The c
 ## Tools
 
 <div align="left">
-    <img src="./src/assets/skills/eslint-icon.svg" alt="ESLint Icon" width="40" title="ESLint" />
-    <img src="./src/assets/skills/nodejs-icon.svg" alt="NodeJS Icon" width="40" title="NodeJS" />
-    <img src="./src/assets/skills/react-icon.svg" alt="React Icon" width="40" title="React" />
-    <img src="./src/assets/skills/typescript-icon.svg" alt="TypeScript Icon" width="40" title="TypeScript" />
-    <img src="./src/assets/skills/vite-icon.svg" alt="Vite Icon" width="40" title="Vite" />
-    <img src="./src/assets/skills/tailwindcss-icon.svg" alt="TailwindCSS Icon" width="40" title="TailwindCSS" />
+    <img src="./src/assets/tools/eslint-icon.svg" alt="ESLint Icon" width="40" title="ESLint" />
+    <img src="./src/assets/tools/nodejs-icon.svg" alt="NodeJS Icon" width="40" title="NodeJS" />
+    <img src="./src/assets/tools/react-icon.svg" alt="React Icon" width="40" title="React" />
+    <img src="./src/assets/tools/typescript-icon.svg" alt="TypeScript Icon" width="40" title="TypeScript" />
+    <img src="./src/assets/tools/vite-icon.svg" alt="Vite Icon" width="40" title="Vite" />
+    <img src="./src/assets/tools/tailwindcss-icon.svg" alt="TailwindCSS Icon" width="40" title="TailwindCSS" />
 </div>
