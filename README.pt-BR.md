@@ -3,7 +3,7 @@
  <span>Documentação Técnica - Zuri</span>
 </h1>
 
-[Português](README.pt-BR.md "Clique para Acessar a Documentação em Inglês")
+[English](README.md "Clique para Acessar a Documentação em Inglês")
 
 ## Sumário
 
