@@ -12,9 +12,10 @@
 - [3- Visual Identity](#visual-identity "Click to View Visual Identity Topic")
   - [3.1- Colors](#1-colors "Click to View Colors Subtopic")
 - [4- How to Use](#how-to-use-zuri-plugin "Click to View Tutorial to Use Topic")
-- [5- Dependences](#dependences "Click to View Dependences Topic")
-- [6- Tools](#tools "Click to View Tools Topic")
-- [7- Requirements](#requirements "Click to View Requirements Topic")
+- [5- CI](#ci "Click to View CI Topic")
+- [6- Dependences](#dependences "Click to View Dependences Topic")
+- [7- Tools](#tools "Click to View Tools Topic")
+- [8- Requirements](#requirements "Click to View Requirements Topic")
 
 ## Overview
 
