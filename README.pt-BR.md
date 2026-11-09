@@ -14,9 +14,10 @@
 - [3- Identidade Visual](#identidade-visual "Clique para Ver o Tópico da Indentidade Visual")
   - [3.1- Cores](#1-cores "Clique para Ver o Subtópico das Cores")
 - [4- Como Usar](#como-usar-o-plugin-do-zuri "Clique para Ver o Tópico do Tutorial de Como Usar")
-- [5- Dependências](#dependências "Clique para Ver o Tópico das Dependências")
-- [6- Ferramentas](#ferramentas "Clique para Ver o Tópico das Ferramentas")
-- [7- Requisitos](#requisitos "Clique para Ver o Tópico dos Requisitos")
+- [5- CI](#ci "Clique para ver o Tópico do CI")
+- [6- Dependências](#dependências "Clique para Ver o Tópico das Dependências")
+- [7- Ferramentas](#ferramentas "Clique para Ver o Tópico das Ferramentas")
+- [8- Requisitos](#requisitos "Clique para Ver o Tópico dos Requisitos")
 
 ## Visualização Geral
 
@@ -88,6 +89,26 @@ npm run dev
 - Selecione a pasta `dist`, teste em qualquer página - selecione um texto, clique com o botão direito e escolha **Analizar com Zuri**. O painel lateral irá abrir. Clicando no link da extensão, também abre o painel.
 
 Em seguida, o botão ativar na página inicial se comunica com a extensão (via postMessage para o content script) e define uma flag no chrome.storage. Com ela ligada, o content script exibe um popup flutuante próximo ao texto selecionado, com Resumir, Conceitos e Traduzir.
+
+## CI
+
+1- Instale as Dependências
+
+```powershell
+npm ci
+```
+
+2- Verifique o Lint
+
+```powersell
+npm run lint
+```
+
+3- Execute o Build
+
+```powershell
+npm run build
+```
 
 ## Requisitos
 
