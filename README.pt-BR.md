@@ -1,5 +1,5 @@
 <h1>
- <img src="./src/assets/zuri-logo-icon-white.png" width="55" align="left">
+ <img src="./src/assets/zuri-logo-icon-white.png" width="50" align="left">
  <span>Documentação Técnica - Zuri</span>
 </h1>
 
