@@ -32,4 +32,4 @@ jobs:
       - name: Verificar artefato de saída
         run: |
           test -f dist/manifest.json || (echo "manifest.json não encontrado na dist" && exit 1)
-          test -f dist/sidepanel.html || (echo "sidepanel.html não encontrado na dist" && exit 1)
+          test -f dist/src/sidepanel/sidepanel.html || (echo "sidepanel.html não encontrado na dist" && exit 1)
