@@ -13,7 +13,6 @@
 - [2- Características](#características "Clique para Ver o Tópico das Características")
 - [3- Identidade Visual](#identidade-visual "Clique para Ver o Tópico da Indentidade Visual")
   - [3.1- Cores](#1-cores "Clique para Ver o Subtópico das Cores")
-  - [3.2- Logo](#2-logo "Clique para Ver o Subtópico da Logo")
 - [4- Como Usar](#como-usar-o-plugin-do-zuri "Clique para Ver o Tópico do Tutorial de Como Usar")
 - [5- Dependências](#dependências "Clique para Ver o Tópico das Dependências")
 - [6- Ferramentas](#ferramentas "Clique para Ver o Tópico das Ferramentas")
@@ -49,14 +48,6 @@ Suas 05 características são:
 - Branco: `#F5F5F5`;
 - Preto: `#0E0E0E`;
 - Cinza: `#999999`;
-
-### 2. Logo
-
-<img src="/src/assets/visual-identity-black-card-1.png" width="400" alt="Visual Identity Black Card 01" title="Logo Zuri"/>
-</br>
-<img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Logo Zuri"/>
-</br>
-<img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Logo Zuri"/>
 
 ## Como Usar o Plugin do Zuri
  
