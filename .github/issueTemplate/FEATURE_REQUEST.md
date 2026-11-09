@@ -1,9 +1,9 @@
 ---
-name: Functionality Sugestion
-about: Suggest an idea or improvement to Zuri
-title: '[FEAT] '
-labels: enhancement
-assignees: ''
+Name: Functionality Sugestion
+About: Suggest an idea or improvement to Zuri
+Title: '[FEAT] '
+Labels: enhancement
+Assignees: ''
 ---
 
 ## Functionality Description
