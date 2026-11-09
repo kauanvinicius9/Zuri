@@ -8,12 +8,8 @@ We appreciate the efforts of security researchers and community members who help
 
 Security updates are provided for the following versions:
 
-| Version | Supported |
-| ------- | --------- |
-| Latest release | ✅ |
-| Older releases | ❌ |
-
-This policy may change as the project evolves.
+> [!NOTE]
+> This policy may change as the project evolves.
 
 ## Reporting a Vulnerability
 
@@ -27,7 +23,8 @@ Include as much information as possible:
 - A proof of concept, if available.
 - Suggested mitigation, if known.
 
-Do not include real user data, passwords, API keys, or other sensitive information in your report.
+> [!WARNING]
+> Don't include real user data, passwords, API keys, or other sensitive information in your report.
 
 ## What to Expect
 
