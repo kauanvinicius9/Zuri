@@ -19,12 +19,7 @@ This policy may change as the project evolves.
 
 **Please do not report security vulnerabilities through public GitHub Issues or Pull Requests.**
 
-If you discover a potential security vulnerability, report it privately through one of the following channels:
-
-- GitHub Private Vulnerability Reporting: [Enable and use this feature in the repository's Security tab](../../security/advisories/new).
-- Email: [saleskauan308@gmail.com](saleskauan308@gmail.com "Click to Access My Email and Report a Vulnerability").
-
-Please include as much information as possible:
+Include as much information as possible:
 
 - A description of the vulnerability.
 - Steps to reproduce the issue.

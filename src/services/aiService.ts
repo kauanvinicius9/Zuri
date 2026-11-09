@@ -1,6 +1,6 @@
 import type { ActionType, UserSettings } from "../types";
 
-export async function processTextWithAI( text: string,  action: ActionType,  settings: UserSettings): Promise<string> {
+export async function processTextWithAI( text: string,  action: ActionType,  settings: UserSettings ): Promise<string> {
     if (settings.provider === "local") {
         try {
             return await processWithLocalAI(text, action);
@@ -28,23 +28,23 @@ export async function processTextWithAI( text: string,  action: ActionType,  set
     throw new Error("Provedor de IA não configurado ou inválido.");
 }
 
-// Processa utilizando as APIs nativas do Chrome de acordo com a ação solicitada
+// Processa utilizando as APIs nativas do Chrome (Built-in AI / Gemini Nano)
 async function processWithLocalAI(text: string, action: ActionType): Promise<string> {
     const aiWindow = window as any;
 
     if (!aiWindow.ai) {
-        throw new Error("O objeto window.ai não está disponível neste navegador");
+        throw new Error("O objeto window.ai não está disponível neste navegador (verifique flags ou versão do Chrome)");
     }
 
     // Ação: Tradução nativa via window.ai.translator
     if (action === "translate") {
         if (!aiWindow.ai.translator) {
-            throw new Error("API window.ai.translator não suportada ou não ativada");
+            throw new Error("API window.ai.translator não suportada");
         }
 
-        const capabilities = await aiWindow.ai.translator.capabilities();
-        if (capabilities.available === "no") {
-            throw new Error("Serviço de tradução local indisponível");
+        const availability = await aiWindow.ai.translator.availability();
+        if (availability === "no") {
+            throw new Error("Serviço de tradução local indisponível no momento.");
         }
 
         const translator = await aiWindow.ai.translator.create({
@@ -57,25 +57,30 @@ async function processWithLocalAI(text: string, action: ActionType): Promise<str
     // Ação: Resumo nativo via window.ai.summarizer
     if (action === "summarize") {
         if (!aiWindow.ai.summarizer) {
-            throw new Error("API window.ai.summarizer não suportada ou não ativada");
-        }
-        const capabilities = await aiWindow.ai.summarizer.capabilities();
-        if (capabilities.available === "no") {
-            throw new Error("Serviço de resumo local indisponível");
+            throw new Error("API window.ai.summarizer não suportada");
         }
 
-        const summarizer = await aiWindow.ai.summarizer.create({ type: "tl;dr", format: "markdown", length: "medium" });
+        const availability = await aiWindow.ai.summarizer.availability();
+        if (availability === "no") {
+            throw new Error("Serviço de resumo local indisponível.");
+        }
+
+        const summarizer = await aiWindow.ai.summarizer.create({ 
+            type: "tl;dr", 
+            format: "markdown", 
+            length: "medium" 
+        });
         return await summarizer.summarize(text);
     }
 
     // Ações: Explain / Extract Concepts via window.ai.languageModel (Prompt API)
     if (!aiWindow.ai.languageModel) {
-        throw new Error("API window.ai.languageModel não suportada ou não ativada");
+        throw new Error("API window.ai.languageModel não suportada");
     }
 
-    const capabilities = await aiWindow.ai.languageModel.capabilities();
-    if (capabilities.available === "no") {
-        throw new Error("Modelo de linguagem local indisponível");
+    const availability = await aiWindow.ai.languageModel.availability();
+    if (availability === "no") {
+        throw new Error("Modelo de linguagem local indisponível.");
     }
 
     const prompts: Record<Exclude<ActionType, "translate" | "summarize">, string> = {
@@ -87,12 +92,8 @@ async function processWithLocalAI(text: string, action: ActionType): Promise<str
     return await session.prompt(prompts[action as keyof typeof prompts]);
 }
 
- // Processa utilizando a API REST do Gemini com modelo configurável e API Key no Header
-async function processWithGeminiAPI(
-    text: string, 
-    action: ActionType, 
-    settings: UserSettings
-): Promise<string> {
+// Processa utilizando a API REST do Gemini (Fallback em Nuvem)
+async function processWithGeminiAPI( text: string,  action: ActionType,  settings: UserSettings ): Promise<string> {
     const model = settings.geminiModel || "gemini-1.5-flash";
 
     const prompts: Record<ActionType, string> = {

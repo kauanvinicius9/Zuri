@@ -10,13 +10,13 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (info.menuItemId === "analyze-selection" && tab?.id && info.selectionText) {
-        await chrome.storage.session.set({
+        chrome.sidePanel.open({ tabId: tab.id });
+        chrome.storage.session.set({
             current_selection: {
                 text: info.selectionText,
                 sourceUrl: tab.url || "",
                 timestamp: Date.now()
             }
         });
-        chrome.sidePanel.open({ tabId: tab.id });
     }
 });
