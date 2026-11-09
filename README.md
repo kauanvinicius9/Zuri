@@ -96,6 +96,26 @@ npm run dev
 
 Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
 
+## CI
+
+1- Install Dependences
+
+```powershell
+npm ci
+```
+
+2- Verify Lint
+
+```powershell
+npm run lint
+```
+
+3- Execute Build of Extension
+
+```powershell
+npm run build
+```
+
 ## Requirements
 
 ### To Run de Project

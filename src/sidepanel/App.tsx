@@ -116,8 +116,8 @@ export const App: React.FC = () => {
                 <main className="flex-1 overflow-y-auto my-4 space-y-4">
                     <div className="p-4 bg-white border border-zinc-300 rounded-xl shadow-sm space-y-4">
                         <div className="flex justify-between items-center border-b border-zinc-200 pb-2">
-                            <h2 className="text-xs font-bold text-zinc-800 uppercase tracking-wider">Configurações de IA</h2>
-                            <button onClick={() => setIsSettingsOpen(false)} className="text-xs text-zinc-500 hover:text-zinc-800">✕ Fechar</button>
+                            <h2 className="text-xs font-bold text-zinc-800">Configurações de IA</h2>
+                            <button onClick={() => setIsSettingsOpen(false)} className="text-xs text-zinc-500 hover:text-zinc-800 cursor-pointer">✕ Fechar</button>
                         </div>
 
                         <form onSubmit={handleSaveSettings} className="space-y-3">
@@ -165,15 +165,15 @@ export const App: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-2 gap-2">
-                            <button onClick={() => handleExecuteAction("summarize")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35131d] hover:text-white border border-[#35131d] rounded-lg text-xs font-medium transition cursor-pointer disabled:opacity-50">
+                            <button onClick={() => handleExecuteAction("summarize")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35131d] hover:text-white border border-[#35131d] rounded-lg text-xs font-medium transition cursor-pointer">
                                 Resumir 
                             </button>
 
-                            <button onClick={() => handleExecuteAction("extract_concepts")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35141d] hover:text-white rounded-lg text-xs font-medium border border-[#35131d] transition cursor-pointer disabled:opacity-50">
+                            <button onClick={() => handleExecuteAction("extract_concepts")} disabled={!selectedText || loading} className="flex text-[#35141d] items-center justify-center gap-2 p-2.5 hover:bg-[#35141d] hover:text-white rounded-lg text-xs font-medium border border-[#35131d] transition cursor-pointer">
                                 Conceitos
                             </button>
 
-                            <button onClick={() => handleExecuteAction("translate")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-[#641b2b] hover:bg-[#35141d] text-white rounded-lg text-xs font-medium transition col-span-2 cursor-pointer disabled:opacity-50">
+                            <button onClick={() => handleExecuteAction("translate")} disabled={!selectedText || loading} className="flex items-center justify-center gap-2 p-2.5 bg-[#641b2b] hover:bg-[#35141d] text-white rounded-lg text-xs font-medium transition col-span-2 cursor-pointer">
                                 Traduzir
                             </button>
                         </div>
