@@ -14,10 +14,10 @@ A simple description about bug
 
 Steps for play behavior:
 
-1- Go to '...'
-2- Click in '...'
-3- Select text '...'
-4- See the error
+- Go to '...'
+- Click in '...'
+- Select text '...'
+- See the error
 
 ## Expected Behavior
 
