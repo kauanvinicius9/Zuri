@@ -11,7 +11,6 @@
 - [2- Characters](#characteres "Click to View Characteres Topic")
 - [3- Visual Identity](#visual-identity "Click to View Visual Identity Topic")
   - [3.1- Colors](#1-colors "Click to View Colors Subtopic")
-  - [3.2- Logo](#2-logo "Click to View Logo Subtopic")
 - [4- How to Use](#how-to-use-zuri-plugin "Click to View Tutorial to Use Topic")
 - [5- Dependences](#dependences "Click to View Dependences Topic")
 - [6- Tools](#tools "Click to View Tools Topic")
@@ -41,20 +40,12 @@ Its 05 characteristics are:
 
 ## Visual Identity
 
-### 1. Colors
+### Colors
 
 - Red: `#35141D` `#641B2B` `#8C2639` `#C65A6C`;
 - White: `#F5F5F5`;
 - Black: `#0E0E0E`;
 - Gray: `#999999`;
-
-### 2. Logo
-
-<img src="/src/assets/visual-identity-black-card-1.png" width="400" alt="Visual Identity Black Card 01" title="Zuri Logo"/>
-</br>
-<img src="/src/assets/visual-identity-black-card-2.png" width="400" alt="Visual Identity Black Card 02" title="Zuri Logo"/>
-</br>
-<img src="/src/assets/visual-identity-white-card.png" width="400" alt="Visual Identity White Card" title="Zuri Logo"/>
 
 ## How to Use Zuri Plugin
  
