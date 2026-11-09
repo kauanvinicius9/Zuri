@@ -68,8 +68,9 @@ export const App: React.FC = () => {
         try {
             const output = await processTextWithAI(selectedText, action, settings);
             setResult(output);
-        } catch (err: any) {
-            setResult(`Erro ao processar: ${err.message}`);
+        } catch (err: unknown) {
+            const message = err instanceof Error ? err.message : "Erro desconhecido";
+            setResult(`Erro ao processar: ${message}`);
         } finally {
             setLoading(false);
         }
@@ -90,8 +91,9 @@ export const App: React.FC = () => {
                 setSaveStatus("");
                 setIsSettingsOpen(false);
             }, 1200);
-        } catch (err: any) {
-            setSaveStatus(`Erro ao salvar: ${err.message}`);
+        } catch (err: unknown) {
+            const message = err instanceof Error ? err.message: "Erro desconhecido";
+            setSaveStatus(`Erro ao salvar: ${message}`);
         }
     };
 
