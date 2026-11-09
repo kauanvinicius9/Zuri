@@ -1,9 +1,9 @@
 ---
-name: Bug Story
-about: Create a new repository to help Zuri
-title: '[BUG] '
-labels: bug
-assignees: ''
+Name: Bug Story
+About: Create a new repository to help Zuri
+Title: '[BUG] '
+Labels: bug
+Assignees: ''
 ---
 
 ## Bug Description
