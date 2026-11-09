@@ -1,9 +1,6 @@
 interface SelectionPayload {
   type: "TEXT_SELECTED_EVENT";
-  payload: {
-    text: string;
-    sourceUrl: string;
-  };
+  payload: { text: string; sourceUrl: string };
 }
 
 let lastSelectedText = "";
@@ -30,10 +27,7 @@ document.addEventListener("mouseup", () => {
                     return;
                 }
             });
-        } catch (error) {
-            console.error("Zuri: Erro ao enviar mensagem de texto selecionado", error);
-        }
-    } else if (!selectedText) {
-        lastSelectedText = "";
-    }
+
+        } catch (error) {console.error("Zuri: Erro ao enviar mensagem de texto selecionado", error)}
+    } else if (!selectedText) {lastSelectedText = ""}
 });

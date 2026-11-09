@@ -26,9 +26,7 @@ export const App: React.FC = () => {
         async function loadStoredSettings() {
             try {
                 const savedSettings = await getUserSettings();
-                if (savedSettings) {
-                    setSettings(savedSettings);
-                }
+                if (savedSettings) {setSettings(savedSettings)}
             } catch (err) {
                 console.error("Erro ao carregar configurações do Zuri:", err);
             }
@@ -39,9 +37,7 @@ export const App: React.FC = () => {
         if (chrome.storage?.session) {
             chrome.storage.session.get(["current_selection"], (res) => {
                 const selection = res.current_selection as SelectionSection | undefined;
-                if (selection?.text) {
-                    setSelectedText(selection.text);
-                }
+                if (selection?.text) {setSelectedText(selection.text)}
             });
         }
 
@@ -56,9 +52,7 @@ export const App: React.FC = () => {
         };
 
         chrome.storage?.onChanged?.addListener(storageListener);
-        return () => {
-            chrome.storage?.onChanged?.removeListener(storageListener);
-        };
+        return () => {chrome.storage?.onChanged?.removeListener(storageListener)};
     }, []);
 
     const handleExecuteAction = async (action: ActionType) => {
@@ -68,9 +62,11 @@ export const App: React.FC = () => {
         try {
             const output = await processTextWithAI(selectedText, action, settings);
             setResult(output);
+
         } catch (err: unknown) {
             const message = err instanceof Error ? err.message : "Erro desconhecido";
             setResult(`Erro ao processar: ${message}`);
+
         } finally {
             setLoading(false);
         }
@@ -91,6 +87,7 @@ export const App: React.FC = () => {
                 setSaveStatus("");
                 setIsSettingsOpen(false);
             }, 1200);
+            
         } catch (err: unknown) {
             const message = err instanceof Error ? err.message: "Erro desconhecido";
             setSaveStatus(`Erro ao salvar: ${message}`);

@@ -4,31 +4,21 @@ interface ChromeAIWindow extends Window {
   ai?: {
     translator?: {
       availability(): Promise<"readily" | "after-download" | "no">;
-      create(options?: { sourceLanguage?: string; targetLanguage?: string }): Promise<{
-        translate(text: string): Promise<string>;
-      }>;
+      create(options?: { sourceLanguage?: string; targetLanguage?: string }): Promise<{translate(text: string): Promise<string>}>;
     };
     summarizer?: {
       availability(): Promise<"readily" | "after-download" | "no">;
-      create(options?: { type?: string; format?: string; length?: string }): Promise<{
-        summarize(text: string): Promise<string>;
-      }>;
+      create(options?: { type?: string; format?: string; length?: string }): Promise<{summarize(text: string): Promise<string>}>;
     };
 
     languageModel?: {
       availability(): Promise<"readily" | "after-download" | "no">;
-      create(): Promise<{
-        prompt(text: string): Promise<string>;
-      }>;
+      create(): Promise<{prompt(text: string): Promise<string>}>;
     };
   };
 }
 
-export async function processTextWithAI(
-  text: string,
-  action: ActionType,
-  settings: UserSettings,
-): Promise<string> {
+export async function processTextWithAI(text: string, action: ActionType, settings: UserSettings): Promise<string> {
   if (settings.provider === "local") {
     try {
       return await processWithLocalAI(text, action);
@@ -59,12 +49,9 @@ export async function processTextWithAI(
 
   // Fluxo da API em Nuvem (Google Gemini)
   if (settings.provider === "gemini") {
-    if (!settings.apiKey) {
-      throw new Error("Chave de API do Gemini não configurada.");
-    }
+    if (!settings.apiKey) {throw new Error("Chave de API do Gemini não configurada.")}
     return await processWithGeminiAPI(text, action, settings);
   }
-
   throw new Error("Provedor de IA não configurado ou inválido.");
 }
 
@@ -72,22 +59,14 @@ export async function processTextWithAI(
 async function processWithLocalAI( text: string, action: ActionType ): Promise<string> {
   const aiWindow = window as unknown as ChromeAIWindow;
 
-  if (!aiWindow.ai) {
-    throw new Error(
-      "O objeto window.ai não está disponível neste navegador (verifique flags ou versão do Chrome)",
-    );
-  }
+  if (!aiWindow.ai) { throw new Error("O objeto window.ai não está disponível neste navegador (verifique flags ou versão do Chrome)") }
 
   // Ação: Tradução nativa via window.ai.translator
   if (action === "translate") {
-    if (!aiWindow.ai.translator) {
-      throw new Error("API window.ai.translator não suportada");
-    }
+    if (!aiWindow.ai.translator) { throw new Error("API window.ai.translator não suportada") }
 
     const availability = await aiWindow.ai.translator.availability();
-    if (availability === "no") {
-      throw new Error("Serviço de tradução local indisponível no momento.");
-    }
+    if (availability === "no") { throw new Error("Serviço de tradução local indisponível no momento.") }
 
     const translator = await aiWindow.ai.translator.create({
       sourceLanguage: "auto",
@@ -98,28 +77,20 @@ async function processWithLocalAI( text: string, action: ActionType ): Promise<s
 
   // Ação: Resumo nativo via window.ai.summarizer
   if (action === "summarize") {
-    if (!aiWindow.ai.summarizer) {
-      throw new Error("API window.ai.summarizer não suportada");
-    }
+    if (!aiWindow.ai.summarizer) { throw new Error("API window.ai.summarizer não suportada") }
 
     const availability = await aiWindow.ai.summarizer.availability();
-    if (availability === "no") {
-      throw new Error("Serviço de resumo local indisponível.");
-    }
+    if (availability === "no") { throw new Error("Serviço de resumo local indisponível.") }
 
     const summarizer = await aiWindow.ai.summarizer.create({ type: "tl;dr", format: "markdown", length: "medium" });
     return await summarizer.summarize(text);
   }
 
   // Ações: Explain / Extract Concepts via window.ai.languageModel (Prompt API)
-  if (!aiWindow.ai.languageModel) {
-    throw new Error("API window.ai.languageModel não suportada");
-  }
+  if (!aiWindow.ai.languageModel) { throw new Error("API window.ai.languageModel não suportada") }
 
   const availability = await aiWindow.ai.languageModel.availability();
-  if (availability === "no") {
-    throw new Error("Modelo de linguagem local indisponível.");
-  }
+  if (availability === "no") { throw new Error("Modelo de linguagem local indisponível.") }
 
   const prompts: Record<Exclude<ActionType, "translate" | "summarize">, string> = {
     explain: `Explique o conceito ou código a seguir de forma didática e objetiva:\n\n${text}`,
