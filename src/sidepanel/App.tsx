@@ -82,7 +82,7 @@ export const App: React.FC = () => {
         e.preventDefault();
         try {
             await saveUserSettings(settings);
-            setSaveStatus("Configurações salvas com sucesso!");
+            setSaveStatus("Configurações salvas");
             setTimeout(() => {
                 setSaveStatus("");
                 setIsSettingsOpen(false);
@@ -187,7 +187,7 @@ export const App: React.FC = () => {
                     {result && (
                         <div className="relative p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-2 shadow-md">
                             <button onClick={copyToClipboard} className="absolute top-2 right-2 px-2 py-1 bg-slate-800 hover:bg-slate-700 rounded-md text-slate-300 text-[10px] transition cursor-pointer">
-                                {copied ? "Copiado!" : "Copiar"}
+                                {copied ? "Copiado" : "Copiar"}
                             </button>
 
                             <div className="text-xs text-slate-200 leading-relaxed whitespace-pre-wrap pr-6">

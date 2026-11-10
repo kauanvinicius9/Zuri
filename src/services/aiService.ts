@@ -103,7 +103,7 @@ async function processWithLocalAI( text: string, action: ActionType ): Promise<s
 
 // Processa utilizando a API REST do Gemini (Fallback em Nuvem)
 async function processWithGeminiAPI( text: string, action: ActionType, settings: UserSettings ): Promise<string> {
-  const model = settings.geminiModel || "gemini-1.5-flash";
+  const model = settings.geminiModel || "gemini-2.0-flash";
 
   const prompts: Record<ActionType, string> = {
     summarize: `Faça um resumo claro, conciso e estruturado em tópicos do seguinte conteúdo:\n\n${text}`,
