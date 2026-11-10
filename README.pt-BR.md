@@ -88,7 +88,9 @@ npm run dev
 - Clique em **Carregar sem compactação**;
 - Selecione a pasta `dist`, teste em qualquer página - selecione um texto, clique com o botão direito e escolha **Analizar com Zuri**. O painel lateral irá abrir. Clicando no link da extensão, também abre o painel.
 
-Em seguida, o botão ativar na página inicial se comunica com a extensão (via postMessage para o content script) e define uma flag no chrome.storage. Com ela ligada, o content script exibe um popup flutuante próximo ao texto selecionado, com Resumir, Conceitos e Traduzir.
+Em seguida, Zuri aparece listado no gerenciador de extensões do Chrome. Sua logo é fixado na barra de ferramentas do navegador ao lado do menu de extensões. Clicando na logo, o painel lateral exibindo o texto selecionado e os métodos (**Resumir**, **Conceitos** e **Traduzir**) aparecem no painel. Além disso, o painel possui configurações, onde você selecionar o **modelo de IA**. Você pode escolher o modelo **Local** (`Local Chrome Built-in / Gemini Nano`) ou o modelo **Nuvem** (`Nuvem Google Gemini API Key`).
+
+Para o modelo **Nuvem** você precisa inserir a chave da API no [Google AI Studio](https://aistudio.google.com/) e definir o modelo de IA (`gemini-3.8-flash`).
 
 ## CI
 
