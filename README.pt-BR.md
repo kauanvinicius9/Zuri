@@ -3,7 +3,7 @@
  <span>Documentação Técnica - Zuri</span>
 </h1>
 
-**Última Atualização**: 09/11/2026
+**Última Atualização**: 10/11/2026
 
 [English](README.md "Clique para Acessar a Documentação em Inglês")
 
