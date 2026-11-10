@@ -88,7 +88,9 @@ npm run dev
 - Load Unpacked;
 - Select `dist` folder, test on any page - select some text, right-click and choose **Analyze with Zuri**. The side panel opens. Clicking on the extension icon also opens the panel.
 
-Then, the **activate** button on the landing page talks to the extension (via postMessage to the content script) and sets a flag in chrome.storage. With it turned on, the content script shows a floating popup near the selected text, with Summarize, Concepts, and Translate.
+Next, Zuri appears listed in the Chrome extensions manager. Its logo is pinned to the browser's toolbar next to the extensions menu. By clicking on the logo, the side panel displaying the selected text and the methods (**Summarize**, **Concepts**, and **Translate**) appears in the panel. Additionally, the panel has settings where you can select the **AI model**. You can choose the **Local** model (`Local Chrome Built-in / Gemini Nano`) or the **Cloud** model (`Google Cloud Gemini API Key`).
+
+For the **Cloud** model, you need to enter the API key in [Google AI Studio](https://aistudio.google.com/) and set the AI model (`gemini-3.8-flash`).
 
 ## CI
 
