@@ -12,7 +12,7 @@
 - [1- Visualização Geral](#visualização-geral "Clique para Ver o Tópico da Visualização Geral")
 - [2- Características](#características "Clique para Ver o Tópico das Características")
 - [3- Identidade Visual](#identidade-visual "Clique para Ver o Tópico da Indentidade Visual")
-  - [3.1- Cores](#1-cores "Clique para Ver o Subtópico das Cores")
+  - [3.1- Cores](#cores "Clique para Ver o Subtópico das Cores")
 - [4- Como Usar](#como-usar-o-plugin-do-zuri "Clique para Ver o Tópico do Tutorial de Como Usar")
 - [5- CI](#ci "Clique para ver o Tópico do CI")
 - [6- Dependências](#dependências "Clique para Ver o Tópico das Dependências")
@@ -43,7 +43,7 @@ Suas 05 características são:
 
 ## Identidade Visual
 
-### 1. Cores
+### Cores
 
 - Vermelho: `#35141D` `#641B2B` `#8C2639` `#C65A6C`;
 - Branco: `#F5F5F5`;
