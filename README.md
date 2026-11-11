@@ -3,7 +3,7 @@
  <span>Technical Documentation - Zuri</span>
 </h1>
 
-**Last Update**: 2026/11/10
+**Last Update**: 2026/11/11
 
 [Português](README.pt-BR.md "Click to Access the Portuguese Documentation")
 
