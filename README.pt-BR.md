@@ -94,7 +94,7 @@ Para o modelo **Nuvem** você precisa inserir a chave da API no [Google AI Studi
 
 ---
 
-Clique no ícone "✅" no topo do repositório ao lado do nome de usuário, escolha o check "Continuous Deployment (CD)", clique em "detalhes" no lado direito. Na sessão "Deploy", role  tela até a etapa "Upload do artefato do Build", na linha 22, clique no [link de download ZIP](https://github.com/kauanvinicius9/Zuri/actions/runs/42808523256/artifacts/13761346040).
+Clique no ícone "✅" no topo do repositório ao lado do nome de usuário, escolha o check **Continuous Deployment (CD)**, clique em **detalhes** no lado direito. Na sessão **Deploy**, role  tela até a etapa **Upload do artefato do Build**, na linha 22, clique no [link de download ZIP](https://github.com/kauanvinicius9/Zuri/actions/runs/42808523256/artifacts/13761346040).
 
 ## CI
 
