@@ -12,7 +12,7 @@
 - [1- Overview](#overview "Click to View Overview Topic")
 - [2- Characters](#characteres "Click to View Characteres Topic")
 - [3- Visual Identity](#visual-identity "Click to View Visual Identity Topic")
-  - [3.1- Colors](#1-colors "Click to View Colors Subtopic")
+  - [3.1- Colors](#colors "Click to View Colors Subtopic")
 - [4- How to Use](#how-to-use-zuri-plugin "Click to View Tutorial to Use Topic")
 - [5- CI](#ci "Click to View CI Topic")
 - [6- Dependences](#dependences "Click to View Dependences Topic")
