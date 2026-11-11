@@ -92,6 +92,10 @@ Em seguida, Zuri aparece listado no gerenciador de extensões do Chrome. Sua log
 
 Para o modelo **Nuvem** você precisa inserir a chave da API no [Google AI Studio](https://aistudio.google.com/) e definir o modelo de IA (`gemini-3.8-flash`).
 
+---
+
+Clique no ícone "✅" no topo do repositório ao lado do nome de usuário, escolha o check "Continuous Deployment (CD)", clique em "detalhes" no lado direito. Na sessão "Deploy", role  tela até a etapa "Upload do artefato do Build", na linha 22, clique no [link de download ZIP](https://github.com/kauanvinicius9/Zuri/actions/runs/42808523256/artifacts/13761346040).
+
 ## CI
 
 1- Instale as Dependências
