@@ -3,7 +3,7 @@
  <span>Documentação Técnica - Zuri</span>
 </h1>
 
-**Última Atualização**: 11/11/2026
+![último Commit](https://img.shields.io/github/last-commit/kauanvinicius9/Zuri?label=Última%20Atualização&color=red)
 
 [English](README.md "Clique para Acessar a Documentação em Inglês")
 
