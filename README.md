@@ -94,6 +94,7 @@ For the **Cloud** model, you need to enter the API key in [Google AI Studio](htt
 
 ---
 
+> [!TIP]
 Click on the "✅" icon at the top of repository near username, choose **Continuous Deployment (CD)**, and click on **details** on the right side. In the **Deploy** section, navigate to the **Upload do artefato do Build** topic, and on line 22, click on the [link of ZIP download](https://github.com/kauanvinicius9/Zuri/actions/runs/42808523256/artifacts/13761346040).
 
 ## CI
