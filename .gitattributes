@@ -12,6 +12,8 @@
 *.scss text eol=lf
 *.html text eol=lf
 
+*.md linguist-detectable=true
+
 *.bat text eol=crlf
 *.cmd text eol=crlf
 
